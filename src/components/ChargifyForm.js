@@ -41,7 +41,7 @@ class ChargifyForm extends Component {
       type: this.state.type || 'card',
   
       // points to your Chargify site
-      serverHost: 'https://acme.chargify.test'
+      serverHost: 'https://acme.chargify.com'
     });
   }
 
