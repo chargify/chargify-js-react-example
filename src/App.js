@@ -5,10 +5,10 @@ import ChargifyForm from './components/ChargifyForm';
 class App extends Component {
   constructor(props) {
     super(props);
-   
+
     this.handlePaymentTypeChange = this.handlePaymentTypeChange.bind(this);
     this.state = {paymentType: 'card'};
-  } 
+  }
 
   handlePaymentTypeChange(e) {
     this.setState({paymentType: e.target.value});
@@ -23,7 +23,8 @@ class App extends Component {
             <option value="bank">Bank Account</option>
           </select>
         </p>
-        <ChargifyForm type={this.state.paymentType}/>
+
+        <ChargifyForm paymentType={this.state.paymentType}/>
       </div>
     );
   }
