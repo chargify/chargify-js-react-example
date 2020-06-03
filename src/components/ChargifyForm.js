@@ -40,6 +40,7 @@ const ChargifyForm = ({ paymentType }) => {
       });
 
       return undefined;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
   useEffect(
@@ -48,6 +49,7 @@ const ChargifyForm = ({ paymentType }) => {
       setToken('');
 
       return () => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         chargify.current.unload();
       };
     }, [chargify, paymentType]);
