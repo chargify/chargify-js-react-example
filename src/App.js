@@ -8,6 +8,10 @@ class App extends Component {
 
     this.handlePaymentTypeChange = this.handlePaymentTypeChange.bind(this);
     this.state = {paymentType: 'card'};
+
+    if (!window.hasOwnProperty('Chargify')) {
+      throw new Error('Chargify.js is not loaded')
+    }
   }
 
   handlePaymentTypeChange(e) {
