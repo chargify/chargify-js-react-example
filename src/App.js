@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import ChargifyForm from './components/ChargifyForm';
+// import ChargifyForm from './components/ChargifyForm';
+// import EventPassingChargifyForm from './components/EventPassingChargifyForm';
+import ExternalFormDataChargifyForm from './components/ExternalFormDataChargifyForm';
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +26,9 @@ class App extends Component {
           </select>
         </p>
 
-        <ChargifyForm paymentType={this.state.paymentType}/>
+        { /* <ChargifyForm paymentType={this.state.paymentType} /> */ }
+        { /* <EventPassingChargifyForm paymentType={this.state.paymentType} />  */ }
+        <ExternalFormDataChargifyForm paymentType={this.state.paymentType} />
       </div>
     );
   }
